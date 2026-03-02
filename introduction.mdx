@@ -1,0 +1,114 @@
+---
+title: Introduction to LendSquawk
+description: Discover LendSquawk, a SaaS platform designed to provide structured intelligence and decision support for loan officers in the lending industry.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+LendSquawk empowers loan officers with structured intelligence for lender overlays and decision support before loan submission. You get real-time insights into lender eligibility, pricing scenarios, and down payment assistance programs tailored to borrower profiles like FICO scores, LTV ratios, and DTI limits.
+
+Key benefits include faster lender matching, reduced submission guesswork, and optimized borrower structures. Access the platform at [app.lendsquawk.com](https://app.lendsquawk.com) to start closing smarter.
+
+## Key Features
+
+Explore the core capabilities that streamline your lending workflow.
+
+<Columns cols={3}>
+  <Card title="Lender Match" icon="users" href="/lender-match">
+    Find eligible lenders based on borrower structure, overlays, and pricing. Compare top matches like Pacific Home Loans at `6.875%` with `85%` LTV for FICO `660`.
+
+    See `6+` eligible lenders ranked by fit score.
+  </Card>
+
+  <Card title="Scenario Comparison" icon="bar-chart-3" href="/scenarios">
+    Compare loan scenarios side-by-side: Conv `30yr Fixed`, FHA `30yr Fixed`, VA IRRRL. Identify best rates and overlays instantly.
+
+    Switch structures to optimize DTI `<43%` or reserves.
+  </Card>
+
+  <Card title="DPA Intelligence" icon="gift" href="/dpa-programs">
+    Surface relevant down payment assistance like CA HFA MyHome (`$15,000`) or GSFA Platinum (`$22,000`). Align programs to your borrower's profile.
+
+    Avoid missing thousands in savings.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get up and running in minutes.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Create your free account at [app.lendsquawk.com](https://app.lendsquawk.com).
+
+    ```
+
+    bash
+    # No code needed - visit the dashboard directly
+    open https://app.lendsquawk.com/signup
+    ```
+
+  </Step>
+
+  <Step title="Create Borrower Profile" icon="edit-3">
+    Enter details: FICO `660`, LTV `75%`, DTI `42%`.
+
+    Select scenario: Conv `30yr Fixed` for `$262,000` purchase.
+  </Step>
+
+  <Step title="Run Lender Match" icon="search">
+    Generate matches and review top lenders.
+
+    Export pricing memo for submissions.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="Dashboard,AUS Rescue">
+  ```javascript
+  // Example borrower data structure
+  const borrower = {
+    fico: 660,
+    ltv: 75,
+    dti: 42,
+    loanAmount: 262000,
+    scenario: "Conv 30yr Fixed"
+  };
+
+  // Run lender match
+  const matches = await fetchLenderMatches(borrower);
+  console.log(matches[0]); // Pacific Home Loans: 6.875%, 85% LTV
+  ```
+  ```python
+  # Python equivalent
+  borrower = {
+      "fico": 660,
+      "ltv": 75,
+      "dti": 42,
+      "loan_amount": 262000,
+      "scenario": "Conv 30yr Fixed"
+  }
+
+  matches = requests.post("https://api.lendsquawk.com/matches", json=borrower)
+  print(matches[0])  # Pacific Home Loans
+  ```
+</CodeGroup>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="rocket" href="/quickstart">
+    Dive into full setup and first scenario.
+  </Card>
+
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your API access with tokens.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Ready to match lenders? Head to the [dashboard](https://app.lendsquawk.com) and create your first scenario.
+</Callout>

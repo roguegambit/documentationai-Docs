@@ -1,0 +1,115 @@
+---
+title: Getting Started with LendSquawk
+description: Set up your account and make your first loan scenario analysis in minutes to start optimizing your lending decisions.
+---
+
+## Prerequisites
+
+<Callout kind="info" title="Before You Begin">
+Ensure you have:
+- A valid email address for account verification
+- Basic borrower details ready (e.g., FICO score, LTV, DTI)
+- Access to `app.lendsquawk.com`
+</Callout>
+
+LendSquawk helps loan officers find the best lender matches based on overlays and eligibility before submission.
+
+## Create and Verify Your Account
+
+Follow these steps to get started in under 2 minutes.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit [`app.lendsquawk.com`](https://app.lendsquawk.com) and click **Sign Up**.
+
+    Enter your email, create a password, and select your role (Loan Officer or Broker).
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for the verification email from LendSquawk.
+
+    Click the verification link to activate your account.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the login page and sign in with your verified credentials.
+
+    You'll land on the dashboard ready for your first scenario.
+  </Step>
+</Steps>
+
+## Navigate the Dashboard
+
+The dashboard provides quick access to key tools like Lender Match, Scenario Comparison, and DPA Intelligence.
+
+<Tabs>
+  <Tab title="Main Sections" icon="layout">
+    - **Lender Match**: Compare lenders by structure (e.g., FICO 660, LTV 75%).
+    - **Scenario Comparison**: Switch between Conv 30yr Fixed, FHA, VA IRRRL.
+    - **DPA Programs**: Surface assistance like CA HFA MyHome ($15,000).
+  </Tab>
+  <Tab title="Active Scenario View" icon="target">
+    View details like:
+    
+    | Lender | Rate | LTV | Score |
+    |--------|------|-----|-------|
+    | Pacific Home Loans | 6.875% | 85% | 100 |
+    | Change Wholesale | 7.125% | 80% | 95 |
+    
+    Use the side-by-side compare for top lenders.
+  </Tab>
+</Tabs>
+
+## Run Your First Lender Match Scenario
+
+Test with a sample purchase scenario: $262,000 loan, FICO 660, LTV 75%, DTI 42%.
+
+<Steps>
+  <Step title="Enter Borrower Profile" icon="user">
+    Click **New Scenario** > **Purchase**.
+
+    Input:
+    - FICO: `660`
+    - LTV: `75%`
+    - DTI: `42%`
+  </Step>
+  <Step title="Select Product" icon="package">
+    Choose **Conv 30yr Fixed** as your active scenario.
+
+    Toggle to compare with **FHA 30yr Fixed** or **VA IRRRL**.
+  </Step>
+  <Step title="Run Lender Match" icon="search">
+    Click **Run Match**. Review results:
+
+    Top match: Pacific Home Loans (6.875%, 85% LTV, score 100).
+
+    Generate the Pricing Memo for submission.
+  </Step>
+  <Step title="Save and Share" icon="save">
+    Save the scenario and export the memo PDF.
+
+    Share via email or integrate with your LOS.
+  </Step>
+</Steps>
+
+<Callout kind="tip" title="Pro Tip">
+Start with conservative inputs (e.g., FICO `<660`, DTI `>45%`) to see AUS Rescue suggestions like adding reserves or co-borrower income.
+</Callout>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Explore Features" icon="zap" href="/introduction">
+    Dive into Lender Match, DPA Intelligence, and more.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure API access for integrations.
+  </Card>
+  <Card title="Advanced Scenarios" icon="trending-up" href="#">
+    Learn DSCR Analysis and Non-QM Overlays.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+  - **No lenders match?** Adjust FICO `>660` or LTV `<80%`.
+  - **Email not received?** Check spam folder or resend verification.
+  - **Slow results?** Clear browser cache and retry.
+</Expandable>

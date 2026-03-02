@@ -1,0 +1,104 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and new features released in LendSquawk to stay informed on platform enhancements.
+---
+
+<Callout kind="info" title="Stay Updated">
+Subscribe to our release notifications to get instant alerts on new features like enhanced Lender Match and DPA Intelligence updates.
+</Callout>
+
+## Recent Releases
+
+Stay current with LendSquawk's evolution. We release updates frequently to improve lender matching accuracy, overlay intelligence, and user experience for loan officers.
+
+<Update label="2024-11-15" description="v2.1.0" tags={["feature", "improvement"]}>
+## New Features
+
+- Enhanced Lender Match with side-by-side lender comparisons for top results
+- Added DPA program filtering by borrower FICO and LTI ratios
+
+## Improvements
+
+- Faster scenario loading for Conv 30yr Fixed and FHA options
+- Updated overlays for Non-QM lenders with real-time pricing memos
+
+## Bug Fixes
+
+- Fixed AUS Rescue suggestions not displaying for VA IRRRL scenarios
+- Resolved DTI calculation discrepancies in high-LTV purchases
+</Update>
+
+<Update label="2024-10-20" description="v2.0.0" tags={["feature", "breaking"]}>
+## New Features
+
+- Introduced Scenario Comparison dashboard for multi-product analysis
+- Integrated DSCR Analysis tool for investment property overlays
+
+## Breaking Changes
+
+- Updated API endpoints for lender data; migrate to new `/v2/lenders` path
+
+## Improvements
+
+- Optimized performance for 75%+ LTV queries, reducing load time by 40%
+
+## Bug Fixes
+
+- Corrected Pacific Home Loans eligibility scoring for FICO 660 borrowers
+- Fixed export issues in pricing memos
+</Update>
+
+<Update label="2024-09-10" description="v1.5.0" tags={["bugfix", "improvement"]}>
+## Improvements
+
+- Refined FHA Guidelines checker with latest HUD updates
+- Better VA IRRRL support including IRRRL-specific overlays
+
+## Bug Fixes
+
+- Patched lender ranking errors in high-DTI (42%+) scenarios
+- Stabilized Change Wholesale and Summit Funding profile matches
+</Update>
+
+## Upcoming Features
+
+Get a preview of what's coming next to supercharge your decision support.
+
+<Columns cols={3}>
+  <Card title="Advanced AUS Rescue" icon="zap" href="#">
+    AI-powered rescues for stuck files with automated overlay suggestions.
+  </Card>
+  <Card title="Real-Time Pricing" icon="trending-up" href="#">
+    Live rate sheets integrated directly into Lender Match results.
+  </Card>
+  <Card title="Custom Overlays" icon="settings" href="#">
+    Build and share your own lender overlay rules for teams.
+  </Card>
+</Columns>
+
+## Upgrade Process
+
+Follow these steps to ensure you have the latest version.
+
+<Steps>
+  <Step title="Check Current Version" icon="check-circle">
+    Visit your dashboard at `app.lendsquawk.com` and navigate to Settings `{>`} About.
+  </Step>
+  <Step title="Review Changes" icon="book-open">
+    Scan this changelog for breaking changes, especially API updates.
+  </Step>
+  <Step title="Update Integrations" icon="download">
+````javascript
+// Example: Update your LOS integration
+const lendsquawk = await initLendSquawk({ apiKey: `YOUR_API_KEY` });
+const results = await lendsquawk.lenderMatch({ fico: 660, ltv: 75 });
+````
+  </Step>
+  <Step title="Test Scenarios" icon="play-circle">
+    Run a sample purchase scenario with Conv 30yr Fixed to verify.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+For enterprise users, contact support@lendsquawk.com for assisted upgrades.
+</Callout>
